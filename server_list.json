@@ -1,0 +1,144 @@
+{
+    "Lobby": {
+        "region": "",
+        "worlds": [
+            "Lobby"
+        ]
+    },
+    "Aether": {
+        "region": "NA",
+        "worlds": [
+            "Adamantoise",
+            "Cactuar",
+            "Faerie",
+            "Gilgamesh",
+            "Jenova",
+            "Midgardsormr",
+            "Sargatanas",
+            "Siren"
+        ],
+        "ip": "204.2.229.9",
+        "addresss": "neolobby02.ffxiv.com"
+    },
+    "Primal": {
+        "region": "NA",
+        "worlds": [
+            "Behemoth",
+            "Excalibur",
+            "Exodus",
+            "Famfrit",
+            "Hyperion",
+            "Lamia",
+            "Leviathan",
+            "Ultros"
+        ],
+        "ip": "204.2.229.10",
+        "addresss": "neolobby04.ffxiv.com"
+    },
+    "Crystal": {
+        "region": "NA",
+        "worlds": [
+            "Balmung",
+            "Brynhildr",
+            "Coeurl",
+            "Diabolos",
+            "Goblin",
+            "Malboro",
+            "Mateus",
+            "Zalera"
+        ],
+        "ip": "204.2.229.11",
+        "addresss": "neolobby08.ffxiv.com"
+    },
+    "Gaia": {
+        "region": "JP",
+        "worlds": [
+            "Alexander",
+            "Bahamut",
+            "Durandal",
+            "Fenrir",
+            "Ifrit",
+            "Ridill",
+            "Tiamat",
+            "Ultima",
+            "Valefor",
+            "Yojimbo",
+            "Zeromus"
+        ],
+        "ip": "124.150.157.157",
+        "addresss": "neolobby03.ffxiv.com"
+    },
+    "Mana": {
+        "region": "JP",
+        "worlds": [
+            "Anima",
+            "Asura",
+            "Belias",
+            "Chocobo",
+            "Hades",
+            "Ixion",
+            "Mandragora",
+            "Masamune",
+            "Pandaemonium",
+            "Shinryu",
+            "Titan"
+        ],
+        "ip": "124.150.157.156",
+        "addresss": "neolobby05.ffxiv.com"
+    },
+    "Elemental": {
+        "region": "JP",
+        "worlds": [
+            "Aegis",
+            "Atomos",
+            "Carbuncle",
+            "Garuda",
+            "Gungnir",
+            "Kujata",
+            "Ramuh",
+            "Tonberry",
+            "Typhon",
+            "Unicorn"
+        ],
+        "ip": "124.150.157.158",
+        "addresss": "neolobby01.ffxiv.com"
+    },
+    "Chaos": {
+        "region": "EU",
+        "worlds": [
+            "Cerberus",
+            "Louisoix",
+            "Moogle",
+            "Omega",
+            "Ragnarok",
+            "Spriggan"
+        ],
+        "ip": "195.82.50.9",
+        "addresss": "neolobby06.ffxiv.com"
+    },
+    "Light": {
+        "region": "EU",
+        "worlds": [
+            "Lich",
+            "Odin",
+            "Phoenix",
+            "Shiva",
+            "Twintania",
+            "Zodiark"
+        ],
+        "ip": "195.82.50.10",
+        "addresss": "neolobby07.ffxiv.com"
+    },
+    "Materia": {
+        "region": "OC",
+        "worlds": [
+            "Bismarck",
+            "Ravana",
+            "Sephirot",
+            "Sophia",
+            "Zurvan"
+        ],
+        "ip": "153.254.80.103",
+        "addresss": "neolobby09.ffxiv.com"
+    }
+}
