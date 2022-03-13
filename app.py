@@ -2,6 +2,7 @@ import json
 import logging
 import asyncio
 import aioping
+import curses
 import typing
 
 DCfilename = "server_list.json"
@@ -27,26 +28,24 @@ class DataCenter():
         return f"name: {self.name:20}    ip: {self.ip:16}    delay: {self.delay:10}"
 
 async def DC_ping(DC: DataCenter=None):
-    try:
-        logging.debug(f"Running ping for {DC.name}")
-        delay = await aioping.ping(DC.ip) * 1000
-        delay = round(delay)
-        logging.debug(f"Ping response from DC {DC.name} took {delay} ms")
-        DC.update_delay(delay)
-        return delay
-    except Exception as e:
-        logging.warn(f"Ping time out with {DC.name}")
-        logging.debug(e)
-        DC.update_delay(-1)
-        return 0
+    while True:
+        try:
+            logging.debug(f"Running ping for {DC.name}")
+            delay = await aioping.ping(DC.ip) * 1000
+            delay = round(delay)
+            logging.debug(f"Ping response from DC {DC.name} took {delay} ms")
+            DC.update_delay(delay)
+        except Exception as e:
+            logging.warning(f"Ping time out with {DC.name}")
+            logging.debug(e)
+            DC.update_delay(-1)
+        await asyncio.sleep(4)
 
 async def DC_update(DCArray : set):
-    while True:
         output = await asyncio.gather(*[
             DC_ping(_DC) for _DC in DCArray
         ])
         logging.debug(output)
-        await asyncio.sleep(2)
 
 async def main():
     DataCenters = set()
@@ -56,7 +55,7 @@ async def main():
     for k in DCRaw.keys():
         DC = DataCenter(k, (DCRaw.get(k).get('ip') or '127.0.0.1'))
         DataCenters.add(DC)
-    asyncio.create_task(DC_update(DataCenters))
+    asyncio.create_task(DC_update(DataCenters),name="DCUpdate")
     while True:
     # at this point we should have the data centers loaded
         await asyncio.sleep(5)
